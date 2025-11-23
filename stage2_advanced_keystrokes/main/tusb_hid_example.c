@@ -113,9 +113,47 @@ uint8_t char_to_hid_keycode(unsigned char c, uint8_t *modifier) {
         keycode = 0; // Return 0 for unsupported characters
     }
     if (modifier != NULL) {
-       *modifier = (mod != 0) ? KEYBOARD_MODIFIER_LEFTSHIFT : 0; 
+        *modifier = (mod != 0) ? KEYBOARD_MODIFIER_LEFTSHIFT : 0;
+        
     }
     return keycode;
+}
+
+/**
+ * @brief Send a single key press and release
+ * @param keycode HID keycode to send
+ */
+void send_key(uint8_t keycode) {
+    ESP_LOGI(TAG, "Sending Keyboard report for keycode: 0x%02X", keycode);
+    uint8_t keycodes[6] = {keycode}; // Prepare an array for keycodes
+    tud_hid_keyboard_report(HID_ITF_PROTOCOL_KEYBOARD, 0, keycodes);
+    vTaskDelay(pdMS_TO_TICKS(10)); // Delay to simulate key press
+    // Release the key
+    tud_hid_keyboard_report(HID_ITF_PROTOCOL_KEYBOARD, 0, NULL);
+    vTaskDelay(pdMS_TO_TICKS(10)); // Short delay before next key
+
+}
+
+/**
+ * @brief Send a key press with modifier and release
+ * @param modifier Modifier key (e.g., KEYBOARD_MODIFIER_LEFTCTRL)
+ * @param keycode HID keycode to send
+ */
+void send_key_with_modifier(uint8_t modifier, const char keycode) {
+    ESP_LOGI(TAG, "Sending Keyboard report for keycode: %c with modifier: 0x%02X", keycode, modifier);
+    uint8_t keycodes[6] = {0}; // Prepare an array for keycodes
+    
+    keycodes[0] = char_to_hid_keycode(keycode, NULL);
+    if (keycodes[0] != 0) { // Only send valid keycodes
+        tud_hid_keyboard_report(HID_ITF_PROTOCOL_KEYBOARD, modifier, keycodes);
+        vTaskDelay(pdMS_TO_TICKS(10)); // Delay to simulate key press
+        // Release the key
+        tud_hid_keyboard_report(HID_ITF_PROTOCOL_KEYBOARD, 0, NULL);
+        vTaskDelay(pdMS_TO_TICKS(10)); // Short delay before next key
+    }
+    else {
+        ESP_LOGW(TAG, "Unsupported character for key with modifier: %c", keycode);
+    }
 }
 
 /**
@@ -151,11 +189,19 @@ void send_string(const char* str) {
 static void send_hid_report(void)
 {
 
-    const char* message = "Hello World ESP32"; // Message to type
-    send_string(message); // Send string as HID key presses
+    // Win + R
+    send_key_with_modifier(KEYBOARD_MODIFIER_LEFTGUI,'r');
+    vTaskDelay(pdMS_TO_TICKS(500));
 
-   
-    
+    // Type "cmd"
+    send_string("cmd");
+    send_key(HID_KEY_ENTER);
+
+    vTaskDelay(pdMS_TO_TICKS(600));
+
+    // Type echo Hello World
+    send_string("echo Hello World ESP32");
+    send_key(HID_KEY_ENTER);    
 }
 
 void app_main(void)
